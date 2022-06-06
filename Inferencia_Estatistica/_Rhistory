@@ -1,0 +1,512 @@
+add_trace(x = qnorm(0.025), type = "scatter", mode = "lines") %>%
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines", fill = "tonext")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines") %>%
+add_trace(x = qnorm(0.025), type = "scatter", mode = "lines") %>%
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines", fill = "tonexty")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", fill = "tozeroy") %>%
+add_trace(x = qnorm(0.025), type = "scatter", mode = "lines") %>%
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", fill = "tozerox") %>%
+add_trace(x = qnorm(0.025), type = "scatter", mode = "lines") %>%
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", fill = "tozeroy") %>%
+add_trace(x = qnorm(0.025), type = "scatter", mode = "lines") %>%
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", fill = "toself") %>%
+add_trace(x = qnorm(0.025), type = "scatter", mode = "lines") %>%
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines") %>%
+add_trace(x = qnorm(0.025), type = "scatter", mode = "lines", fill = "tonext") %>%
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines") %>%
+add_trace(x = qnorm(0.025), type = "scatter", mode = "lines", fill = "tonext") %>%
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines", fill = "tonext")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines") %>%
+add_trace(x = qnorm(0.025), type = "scatter", mode = "lines") %>%
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines", fill = "tonext")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines") %>%
+add_trace(x = qnorm(0.025), type = "scatter", mode = "lines", fill = "tonext") %>%
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines") %>%
+add_trace(x = qnorm(0.025), type = "scatter", mode = "lines", fill = "tonexty") %>%
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines") %>%
+add_trace(x = qnorm(0.025), type = "scatter", mode = "lines", fill = "tonextx") %>%
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines") %>%
+add_trace(x = qnorm(0.025), type = "scatter", mode = "lines", fill = "tonext") %>%
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines") %>%
+add_trace(x = qnorm(0.025), type = "scatter", mode = "lines", fill = "tozeroy") %>%
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines") %>%
+add_trace(x = qnorm(0.025), type = "scatter", mode = "lines", fill = "tozero") %>%
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines") %>%
+add_trace(x = qnorm(0.025), type = "scatter", mode = "lines", fill = "tozerox") %>%
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines") %>%
+add_trace(x = qnorm(0.025), type = "scatter", mode = "lines", fill = "tozeroy") %>%
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines", fill = "tozeroy")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", fill = "tonext") %>%
+add_trace(x = qnorm(0.025), type = "scatter", mode = "lines", fill = "tozeroy") %>%
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines", fill = "tozeroy")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", fill = "toself") %>%
+add_trace(x = qnorm(0.025), type = "scatter", mode = "lines", fill = "tozeroy") %>%
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines", fill = "tozeroy")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", fill = "tonext") %>%
+add_trace(x = qnorm(0.025), type = "scatter", mode = "lines", fill = "toself") %>%
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines", fill = "toself")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", fill = "tonext") %>%
+add_trace(x = seq(-3,3,0.01), y = sen(seq(-3,3,0.01)), type = "scatter", mode = "lines", fill = "toself")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", fill = "tonext") %>%
+add_trace(x = seq(-3,3,0.01), y = sin(seq(-3,3,0.01)), type = "scatter", mode = "lines", fill = "toself")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", fill = "tonext") %>%
+add_trace(x = seq(-3,3,0.01), y = sin(seq(-3,3,0.01)), type = "scatter", mode = "lines")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines") %>%
+add_trace(x = seq(-3,3,0.01), y = sin(seq(-3,3,0.01)), type = "scatter", mode = "lines", fill = "tonext")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines") %>%
+add_trace(x = seq(-3,3,0.01), y = sin(seq(-3,3,0.01)), type = "scatter", mode = "lines",
+fill = "toself")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines") %>%
+add_trace(x = seq(-3,3,0.01), y = sin(seq(-3,3,0.01)), type = "scatter", mode = "lines",
+fill = "tozeroy")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines") %>%
+add_trace(x = seq(-3,3,0.01), y = sin(seq(-3,3,0.01)), type = "scatter", mode = "lines",
+fill = "toself")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines") %>%
+add_trace(x = seq(-3,3,0.01), y = sin(seq(-3,3,0.01)), type = "scatter", mode = "lines",
+fill = "tozerox")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines") %>%
+#add_trace(x = seq(-3,3,0.01), y = sin(seq(-3,3,0.01)), type = "scatter", mode = "lines",
+#       fill = "tozerox")
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines", fill = "toself")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines") %>%
+#add_trace(x = seq(-3,3,0.01), y = sin(seq(-3,3,0.01)), type = "scatter", mode = "lines",
+#       fill = "tozerox")
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines", fill = "tozerox")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines") %>%
+#add_trace(x = seq(-3,3,0.01), y = sin(seq(-3,3,0.01)), type = "scatter", mode = "lines",
+#       fill = "tozerox")
+add_trace(y = qnorm(0.975), type = "scatter", mode = "lines", fill = "tozerox")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines") %>%
+#add_trace(x = seq(-3,3,0.01), y = sin(seq(-3,3,0.01)), type = "scatter", mode = "lines",
+#       fill = "tozerox")
+add_trace(y = qnorm(0.975), type = "scatter", mode = "lines", fill = "tozeroy")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines") %>%
+#add_trace(x = seq(-3,3,0.01), y = sin(seq(-3,3,0.01)), type = "scatter", mode = "lines",
+#       fill = "tozerox")
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines", fill = "tozerox")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", fill = "tonextx") %>%
+#add_trace(x = seq(-3,3,0.01), y = sin(seq(-3,3,0.01)), type = "scatter", mode = "lines",
+#       fill = "tozerox")
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines", fill = "tozerox")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", fill = "tonextx") %>%
+#add_trace(x = seq(-3,3,0.01), y = sin(seq(-3,3,0.01)), type = "scatter", mode = "lines",
+#       fill = "tozerox")
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines", fill = "none")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", fill = "tonextx") %>%
+add_trace(x = seq(-3,3,0.01), y = sin(seq(-3,3,0.01)), type = "scatter", mode = "lines",
+fill = "none")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", fill = "tonextx") %>%
+add_trace(x = seq(-3,3,0.01), y = sin(seq(-3,3,0.01)), type = "scatter", mode = "lines",
+fill = "none")%>%
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines", fill = "none")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", fill = "tonextx") %>%
+add_trace(x = qnorm(0.025), y = sin(seq(-3,3,0.01)), type = "scatter", mode = "lines",
+fill = "none")%>%
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines", fill = "none")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", fill = "tonextx") %>%
+add_trace(x = qnorm(0.025), y = dnorm(seq(-3,3,0.01)), type = "scatter", mode = "lines",
+fill = "none")%>%
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines", fill = "none")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", fill = "tonextx") %>%
+add_trace(x = qnorm(0.025), y = -2:2, type = "scatter", mode = "lines",
+fill = "none")%>%
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines", fill = "none")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", fill = "tonextx") %>%
+add_trace(y = qnorm(0.025), x = -2:2, type = "scatter", mode = "lines",
+fill = "none")%>%
+add_trace(y = qnorm(0.975), x = -2:2, type = "scatter", mode = "lines", fill = "none")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", fill = "tonexty") %>%
+add_trace(y = qnorm(0.025), x = -2:2, type = "scatter", mode = "lines",
+fill = "none")%>%
+add_trace(y = qnorm(0.975), x = -2:2, type = "scatter", mode = "lines", fill = "none")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", fill = "tonexty") %>%
+add_trace(y = qnorm(0.025), x = -2:2, type = "scatter", mode = "lines",
+fill = "tonexty")%>%
+add_trace(y = qnorm(0.975), x = -2:2, type = "scatter", mode = "lines", fill = "none")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", fill = "tonexty") %>%
+add_trace(y = qnorm(0.025), x = -2:2, type = "scatter", mode = "lines",
+fill = "tonexty")%>%
+add_trace(y = qnorm(0.975), x = -2:2, type = "scatter", mode = "lines", fill = "tonexty")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", fill = "tonexty") %>%
+add_trace(y = qnorm(0.025), x = -2:2, type = "scatter", mode = "lines",
+fill = "none")%>%
+add_trace(y = qnorm(0.975), x = -2:2, type = "scatter", mode = "lines", fill = "tonexty")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", fill = "none") %>%
+add_trace(y = qnorm(0.025), x = -2:2, type = "scatter", mode = "lines",
+fill = "none")%>%
+add_trace(y = qnorm(0.975), x = -2:2, type = "scatter", mode = "lines", fill = "tonexty")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", fill = "none") %>%
+add_trace(y = qnorm(0.025), x = -2:2, type = "scatter", mode = "lines",
+fill = "none")%>%
+add_trace(y = qnorm(0.975), x = -2:2, type = "scatter", mode = "lines", fill = "tonextx")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", fill = "none") %>%
+add_trace(y = qnorm(0.975), x = -2:2, type = "scatter", mode = "lines",
+fill = "none")%>%
+add_trace(y = qnorm(0.025), x = -2:2, type = "scatter", mode = "lines", fill = "tonextx")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", fill = "none") %>%
+add_trace(y = qnorm(0.975), x = -2:2, type = "scatter", mode = "lines",
+fill = "tonexty")%>%
+add_trace(y = qnorm(0.025), x = -2:2, type = "scatter", mode = "lines", fill = "none")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", fill = "tonexty") %>%
+add_trace(y = qnorm(0.975), x = -2:2, type = "scatter", mode = "lines",
+fill = "none")%>%
+add_trace(y = qnorm(0.025), x = -2:2, type = "scatter", mode = "lines", fill = "none")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", fill = "tonexty") %>%
+add_trace(y = qnorm(0.025), x = -2:2, type = "scatter", mode = "lines",
+fill = "none") %>%
+add_trace(y = qnorm(0.975), x = -2:2, type = "scatter", mode = "lines", fill = "none")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines") %>%
+add_trace(x = qnorm(0.025), type = "scatter", mode = "lines") %>%
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines") %>%
+add_trace(x = qnorm(0.025), type = "scatter", mode = "lines", color = "blue") %>%
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines", color = "blue")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", color = "blue") %>%
+add_trace(x = qnorm(0.025), type = "scatter", mode = "lines", color = "blue") %>%
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines", color = "blue")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", color = 1) %>%
+add_trace(x = qnorm(0.025), type = "scatter", mode = "lines", color = "blue") %>%
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines", color = "blue")
+dnorm(0)
+dnorm(2)
+dnorm(qnorm(0.025))
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", color = 1) %>%
+add_trace(x = qnorm(0.025), y=seq(0,dnorm(qnorm(0.025)),0.01) ,type = "scatter", mode = "lines", color = "blue") %>%
+add_trace(x = qnorm(0.975), type = "scatter", mode = "lines", color = "blue")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", color = 1) %>%
+add_trace(x = qnorm(0.025), y = seq(0, dnorm(qnorm(0.025)), 0.01) ,type = "scatter", mode = "lines", color = "blue") %>%
+add_trace(x = qnorm(0.975), y = y = seq(0, dnorm(qnorm(0.025)), 0.01), type = "scatter", mode = "lines", color = "blue")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", color = 1) %>%
+add_trace(x = qnorm(0.025), y = seq(0, dnorm(qnorm(0.025)), 0.01) ,type = "scatter", mode = "lines", color = "blue") %>%
+add_trace(x = qnorm(0.975), y = seq(0, dnorm(qnorm(0.025)), 0.01), type = "scatter", mode = "lines", color = "blue")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", color = 2) %>%
+add_trace(x = qnorm(0.025), y = seq(0, dnorm(qnorm(0.025)), 0.01) ,type = "scatter", mode = "lines", color = "blue") %>%
+add_trace(x = qnorm(0.975), y = seq(0, dnorm(qnorm(0.025)), 0.01), type = "scatter", mode = "lines", color = "blue")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", color = 102) %>%
+add_trace(x = qnorm(0.025), y = seq(0, dnorm(qnorm(0.025)), 0.01) ,type = "scatter", mode = "lines", color = "blue") %>%
+add_trace(x = qnorm(0.975), y = seq(0, dnorm(qnorm(0.025)), 0.01), type = "scatter", mode = "lines", color = "blue")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", color = "black") %>%
+add_trace(x = qnorm(0.025), y = seq(0, dnorm(qnorm(0.025)), 0.01) ,type = "scatter", mode = "lines", color = "blue") %>%
+add_trace(x = qnorm(0.975), y = seq(0, dnorm(qnorm(0.025)), 0.01), type = "scatter", mode = "lines", color = "blue")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", color = "black") %>%
+add_trace(x = qnorm(0.025), y = seq(0, dnorm(qnorm(0.025)), 0.01) ,type = "scatter",
+mode = "lines", color = "black") %>%
+add_trace(x = qnorm(0.975), y = seq(0, dnorm(qnorm(0.025)), 0.01), type = "scatter",
+mode = "lines", color = "black")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", line = list(color = "#000000")) %>%
+add_trace(x = qnorm(0.025), y = seq(0, dnorm(qnorm(0.025)), 0.01) ,type = "scatter",
+mode = "lines", color = "black") %>%
+add_trace(x = qnorm(0.975), y = seq(0, dnorm(qnorm(0.025)), 0.01), type = "scatter",
+mode = "lines", color = "black")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", line = list(color = "#000000")) %>%
+add_trace(x = qnorm(0.025), y = seq(0, dnorm(qnorm(0.025)), 0.001) ,type = "scatter",
+mode = "lines", color = "black") %>%
+add_trace(x = qnorm(0.975), y = seq(0, dnorm(qnorm(0.025)), 0.001), type = "scatter",
+mode = "lines", color = "black")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", line = list(color = "#000000")) %>%
+add_trace(x = qnorm(0.025), y = seq(0, dnorm(qnorm(0.025)), 0.0001) ,type = "scatter",
+mode = "lines", color = "black") %>%
+add_trace(x = qnorm(0.975), y = seq(0, dnorm(qnorm(0.025)), 0.0001), type = "scatter",
+mode = "lines", color = "black")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", line = list(color = "#000000"), showlegend = F) %>%
+add_trace(x = qnorm(0.025), y = seq(0, dnorm(qnorm(0.025)), 0.0001) ,type = "scatter",
+mode = "lines", color = "black") %>%
+add_trace(x = qnorm(0.975), y = seq(0, dnorm(qnorm(0.025)), 0.0001), type = "scatter",
+mode = "lines", color = "black")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", line = list(color = "#000000"), showlegend = F, fill = "tozeroy") %>%
+add_trace(x = qnorm(0.025), y = seq(0, dnorm(qnorm(0.025)), 0.0001) ,type = "scatter",
+mode = "lines", color = "black") %>%
+add_trace(x = qnorm(0.975), y = seq(0, dnorm(qnorm(0.025)), 0.0001), type = "scatter",
+mode = "lines", color = "black")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", line = list(color = "#0000FF"), showlegend = F, fill = "tozeroy") %>%
+add_trace(x = qnorm(0.025), y = seq(0, dnorm(qnorm(0.025)), 0.0001) ,type = "scatter",
+mode = "lines", color = "black") %>%
+add_trace(x = qnorm(0.975), y = seq(0, dnorm(qnorm(0.025)), 0.0001), type = "scatter",
+mode = "lines", color = "black")
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", line = list(color = "#101083"), showlegend = F, fill = "tozeroy") %>%
+add_trace(x = qnorm(0.025), y = seq(0, dnorm(qnorm(0.025)), 0.0001) ,type = "scatter",
+mode = "lines", color = "black") %>%
+add_trace(x = qnorm(0.975), y = seq(0, dnorm(qnorm(0.025)), 0.0001), type = "scatter",
+mode = "lines", color = "black")
+runApp()
+#
+plot_ly(x = seq(-3,3,0.01), y = dnorm(seq(-3,3,0.01)), type = "scatter",
+mode = "lines", line = list(color = "#101083"), showlegend = F, fill = "tozeroy") %>%
+add_trace(x = qnorm(0.025), y = seq(0, dnorm(qnorm(0.025)), 0.0001) ,type = "scatter",
+mode = "lines") %>%
+add_trace(x = qnorm(0.975), y = seq(0, dnorm(qnorm(0.025)), 0.0001), type = "scatter",
+mode = "lines")
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+shiny::runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+shiny::runApp()
+install.packages("shinydashboard")
+runApp()
+install.packages("plotly")
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+shiny::runApp()
+rsconnect::setAccountInfo(name='gabriel-machado', token='268F0492A54E47C6D6344B33CD7EB377', secret='qS/oJywP7wzKsihrw8zgbwWLpaMLEZFriSBnjUDy')
+shiny::runApp()
+runApp()
+runApp()
+shiny::runApp()
+#
+plot_ly(x = seq(0.1,5,0.01), y = (4*(seq(0.1,5,0.01))^2 + 27*n*(seq(0.1,5,0.01))^2)/48, type = "scatter",
+mode = "lines", line = list(color = "#101083"), showlegend = F, fill = "tozeroy") #%>%
+#
+n = 10
+plot_ly(x = seq(0.1,5,0.01), y = (4*(seq(0.1,5,0.01))^2 + 27*n*(seq(0.1,5,0.01))^2)/48, type = "scatter",
+mode = "lines", line = list(color = "#101083"), showlegend = F, fill = "tozeroy") #%>%
+plot_ly(x = seq(0.1,10,0.01), y = (4*(seq(0.1,10,0.01))^2 + 27*n*(seq(0.1,10,0.01))^2)/48, type = "scatter",
+mode = "lines", line = list(color = "#101083"), showlegend = F, fill = "tozeroy") #%>%
+plot_ly(x = seq(0.1,10,0.01), y = (4*(seq(0.1,10,0.01))^2 + 27*n*(seq(0.1,10,0.01))^2)/48, type = "scatter",
+mode = "lines", line = list(color = "#101083"), showlegend = F, fill = "tozeroy") %>%
+add_trace(x = seq(0.1,10,0.01), y = (2*n*(seq(0.1,10,0.01))^2 + 2*(seq(0.1,10,0.01))^2) / ((n+2)*(n+1)^2) ,
+type = "scatter",
+mode = "lines")
+plot_ly(x = seq(0.1,10,0.01), y = (4*(seq(0.1,10,0.01))^2 + 27*n*(seq(0.1,10,0.01))^2)/48, type = "scatter",
+mode = "lines", fill = "tozeroy") %>%
+add_trace(x = seq(0.1,10,0.01), y = (2*n*(seq(0.1,10,0.01))^2 + 2*(seq(0.1,10,0.01))^2) / ((n+2)*(n+1)^2) ,
+type = "scatter",
+mode = "lines")
+plot_ly(x = seq(0.1,10,0.01), y = (4*(seq(0.1,10,0.01))^2 + 27*n*(seq(0.1,10,0.01))^2)/48, type = "scatter",
+mode = "lines", fill = "tozeroy") %>%
+add_trace(x = seq(0.1,10,0.01), y = (2*(seq(0.1,10,0.01))^2) / ((n+2)*(n+1)) ,
+type = "scatter",
+mode = "lines")
+#
+n = 5
+plot_ly(x = seq(0.1,10,0.01), y = (4*(seq(0.1,10,0.01))^2 + 27*n*(seq(0.1,10,0.01))^2)/48, type = "scatter",
+mode = "lines", fill = "tozeroy") %>%
+add_trace(x = seq(0.1,10,0.01), y = (2*(seq(0.1,10,0.01))^2) / ((n+2)*(n+1)) ,
+type = "scatter",
+mode = "lines")
+#
+n = 1
+plot_ly(x = seq(0.1,10,0.01), y = (4*(seq(0.1,10,0.01))^2 + 27*n*(seq(0.1,10,0.01))^2)/48, type = "scatter",
+mode = "lines", fill = "tozeroy") %>%
+add_trace(x = seq(0.1,10,0.01), y = (2*(seq(0.1,10,0.01))^2) / ((n+2)*(n+1)) ,
+type = "scatter",
+mode = "lines")
+#
+n = 2
+plot_ly(x = seq(0.1,10,0.01), y = (4*(seq(0.1,10,0.01))^2 + 27*n*(seq(0.1,10,0.01))^2)/48, type = "scatter",
+mode = "lines", fill = "tozeroy") %>%
+add_trace(x = seq(0.1,10,0.01), y = (2*(seq(0.1,10,0.01))^2) / ((n+2)*(n+1)) ,
+type = "scatter",
+mode = "lines")
+#
+n = 20
+plot_ly(x = seq(0.1,10,0.01), y = (4*(seq(0.1,10,0.01))^2 + 27*n*(seq(0.1,10,0.01))^2)/48, type = "scatter",
+mode = "lines", fill = "tozeroy") %>%
+add_trace(x = seq(0.1,10,0.01), y = (2*(seq(0.1,10,0.01))^2) / ((n+2)*(n+1)) ,
+type = "scatter",
+mode = "lines")
+#
+n = 10
+plot_ly(x = seq(0.1,10,0.01), y = (4*(seq(0.1,10,0.01))^2 + 27*n*(seq(0.1,10,0.01))^2)/48, type = "scatter",
+mode = "lines", fill = "tozeroy") %>%
+add_trace(x = seq(0.1,10,0.01), y = (2*(seq(0.1,10,0.01))^2) / ((n+2)*(n+1)) ,
+type = "scatter",
+mode = "lines")
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+shiny::runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()

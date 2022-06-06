@@ -1,0 +1,55 @@
+library(shiny); runApp('Teste.R')
+install.packages('rsconnect')
+install.packages("rsconnect")
+rsconnect::setAccountInfo(name='gabriel-machado', token='268F0492A54E47C6D6344B33CD7EB377', secret='qS/oJywP7wzKsihrw8zgbwWLpaMLEZFriSBnjUDy')
+library(rsconnect)
+rsconnect::deployApp('E:\\ENCE\\Inferência Estatística I\\Monitoria\\Shiny\\gabriel-machado.R')
+library(rsconnect)
+rsconnect::deployApp('E:\\ENCE\\Inferência Estatística I\\Monitoria\\Shiny\\gabriel-machado.Rmd')
+library(shiny)
+library(ggplot2)
+# Define UI for dataset viewer app ----
+ui <- fluidPage(
+# App title ----
+titlePanel("Gráficos Densidades"),
+# Sidebar layout with input and output definitions ----
+sidebarLayout(
+# Sidebar panel for inputs ----
+sidebarPanel(
+selectInput(inputId = "dist",
+label = "Escolha a distribuição:",
+choices = c("dbeta", "df", "dgamma", "dnorm", "dunif")),
+numericInput(inputId = "parametro1",
+label = "Valor do Parâmetro 1:",
+value = 7),
+numericInput(inputId = "parametro2",
+label = "Valor do Parâmetro 2:",
+value = 2),
+sliderInput(inputId = "lim1",
+label = "Limite inferior:",
+min = -10,
+max = 0,
+value = 0),
+sliderInput(inputId = "lim2",
+label = "Limite superior:",
+min = 0,
+max = 10,
+value = 1)
+),
+# Main panel for displaying outputs ----
+mainPanel(
+plotOutput(outputId = "grafico_ggplot")
+)
+)
+)
+# Define server logic to summarize and view selected dataset ----
+server <- function(input, output) {
+output$grafico_ggplot <- renderPlot({
+ggplot(data = data.frame(x = c(input$lim1, input$lim2)), aes(x)) +
+stat_function(fun = input$dist, n = 101, args = list(input$parametro1, input$parametro2)) +
+ylab("") +
+scale_y_continuous(breaks = seq(0,10,.5))
+})
+}
+# Create Shiny app ----
+shinyApp(ui, server)

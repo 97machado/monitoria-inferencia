@@ -1,0 +1,156 @@
+library(shiny)
+library(shinydashboard)
+library(plotly)
+
+shinyServer(function(input, output){
+  
+  IC1 <- reactive({
+    set.seed(111)
+    x1 <- rnorm(input$ams1, input$mu1, sqrt(input$sigma21))
+    qt1 <- qnorm((1+input$nv1)/2)
+    IC1 <- c(mean(x1) - ((qt1*sqrt(input$sigma21))/sqrt(input$ams1)), 
+             mean(x1) + ((qt1*sqrt(input$sigma21))/sqrt(input$ams1)))
+    IC1
+  })
+  output$graf1 <- renderPlotly(
+    plot_ly(x = seq(-3, 3, 0.01), y = dnorm(seq(-3, 3, 0.01)), type = "scatter",
+            mode = "lines", line = list(color = "#043142"), showlegend = F, 
+            fill = "tozeroy")  %>%
+    add_trace(x = qnorm((1 - input$nv1)/2), y = seq(0, dnorm(qnorm((1 - input$nv1)/2)), 0.0001), 
+              type = "scatter", mode = "lines") %>%
+    add_trace(x = qnorm((1 + input$nv1)/2), y = seq(0, dnorm(qnorm((1 + input$nv1)/2)), 0.0001), 
+                type = "scatter", mode = "lines") %>%
+      layout(title = "Distribuição da Quantidade Pivotal - N(0,1)", xaxis = list(title = ""))
+  )  
+  
+  output$ic1 <- renderPrint({
+    paste("O IC obtido é de: [",round(IC1()[1], 6),";",round(IC1()[2], 6),"]")
+    })
+  
+  IC2 <- reactive({
+    set.seed(121)
+    x2 <- rnorm(input$ams2, input$mu2, sqrt(input$sigma22))
+    qt2 <- qt((1+input$nv2)/2, input$ams2-1)
+    IC2 <- c(mean(x2) - ((qt2*sd(x2))/sqrt(input$ams2)), 
+             mean(x2) + ((qt2*sd(x2))/sqrt(input$ams2)))
+    IC2
+  })
+  output$graf2 <- renderPlotly(
+    plot_ly(x = seq(-3, 3, 0.01), y = dt(seq(-3, 3, 0.01), input$ams2-1), type = "scatter",
+            mode = "lines", line = list(color = "#043142"), showlegend = F, 
+            fill = "tozeroy")  %>%
+      add_trace(x = qt((1 - input$nv2)/2, input$ams2-1), 
+                y = seq(0, dt(qt((1 - input$nv2)/2, input$ams2-1), input$ams2-1), 0.0001), 
+                type = "scatter", mode = "lines") %>%
+      add_trace(x = qt((1 + input$nv2)/2, input$ams2-1), 
+                y = seq(0, dt(qt((1 + input$nv2)/2, input$ams2-1), input$ams2-1), 0.0001), 
+                type = "scatter", mode = "lines") %>%
+      layout(title = "Distribuição da Quantidade Pivotal - t-student(n-1)", 
+             xaxis = list(title = ""))
+  )  
+  
+  output$ic2 <- renderPrint({
+    paste("O IC obtido é de: [",round(IC2()[1], 6),";",round(IC2()[2], 6),"]")
+  })
+  
+  IC3 <- reactive({
+    set.seed(131)
+    x3 <- rnorm(input$ams3, input$mu3, sqrt(input$sigma23))
+    qt13 <- qchisq((1-input$nv3)/2, input$ams3-1)
+    qt23 <- qchisq((1+input$nv3)/2, input$ams3-1)
+    IC3 <- c((var(x3) * (input$ams3-1))/qt23,(var(x3)*(input$ams3-1))/qt13)
+    IC3
+  })
+  output$graf3 <- renderPlotly(
+    plot_ly(x = seq(qchisq(0.005,input$ams3-1), qchisq(0.995, input$ams3-1), 0.1), 
+            y = dchisq(seq(qchisq(0.005,input$ams3-1), qchisq(0.995, input$ams3-1), 0.1), 
+                       input$ams3-1), type = "scatter", mode = "lines", 
+            line = list(color = "#043142"), showlegend = F, fill = "tozeroy")  %>%
+      add_trace(x = qchisq((1 - input$nv3)/2, input$ams3-1), 
+                y = seq(0, dchisq(qchisq((1 - input$nv3)/2, input$ams3-1), input$ams3-1), 0.0001), 
+                type = "scatter", mode = "lines") %>%
+      add_trace(x = qchisq((1 + input$nv3)/2, input$ams3-1), 
+                y = seq(0, dchisq(qchisq((1 + input$nv3)/2, input$ams3-1), input$ams3-1), 0.0001), 
+                type = "scatter", mode = "lines") %>%
+      layout(title = "Distribuição da Quantidade Pivotal - χ²(n-1)", 
+             xaxis = list(title = ""))
+  )  
+  
+  output$ic3 <- renderPrint({
+    paste("O IC obtido é de: [",round(IC3()[1], 6),";",round(IC3()[2], 6),"]")
+  })  
+
+  IC4 <- reactive({
+    set.seed(141)
+    x4 <- rnorm(input$ams14, input$mu14, sqrt(input$sigma24))
+    y4 <- rnorm(input$ams24, input$mu24, sqrt(input$sigma24))
+    qt4 <- qt((1+input$nv4)/2, input$ams14+input$ams24-2)
+    s2p <- (((input$ams14-1)*var(x4)) + ((input$ams24-1)*var(y4))) / (input$ams14 + input$ams24 - 2)
+    IC4 <- c(mean(x4) - mean(y4) - qt4*sqrt(s2p * ((1/input$ams14)+(1/input$ams24))),
+             mean(x4) - mean(y4) + qt4*sqrt(s2p * ((1/input$ams14)+(1/input$ams24))))
+    IC4
+  })
+  output$graf4 <- renderPlotly(
+    plot_ly(x = seq(-3, 3, 0.01), y = dt(seq(-3, 3, 0.01), input$ams14 + input$ams24 - 2), 
+            type = "scatter", mode = "lines", line = list(color = "#043142"), showlegend = F, 
+            fill = "tozeroy")  %>%
+      add_trace(x = qt((1 - input$nv4)/2, input$ams14 + input$ams24-2), 
+                y = seq(0, dt(qt((1 - input$nv4)/2, input$ams14 + input$ams24-2), 
+                              input$ams14 + input$ams24-2), 0.0001), 
+                type = "scatter", mode = "lines") %>%
+      add_trace(x = qt((1 + input$nv4)/2, input$ams14 + input$ams24-2), 
+                y = seq(0, dt(qt((1 + input$nv4)/2, input$ams14 + input$ams24-2), 
+                              input$ams14 + input$ams24-2), 0.0001), 
+                type = "scatter", mode = "lines") %>%
+      layout(title = "Distribuição da Quantidade Pivotal - t-student(n+m-2)", 
+             xaxis = list(title = ""))
+  )  
+  
+  output$ic4 <- renderPrint({
+    pt14 <- paste("A diferença de médias (parâmetro) estimada é:",input$mu14 - input$mu24)
+    pt24 <- paste("e o  IC obtido é de: [",round(IC4()[1], 6),";",round(IC4()[2], 6),"]")
+    paste(list(pt14, pt24))
+  })
+
+  output$graf5 <- renderPlotly(
+    plot_ly(x = seq(-3, 3, 0.01), y = dnorm(seq(-3,3,0.01), input$mu5, sqrt(input$sigma25/input$ams5)),
+            type = "scatter", mode = "lines", line = list(color = "#043142"), showlegend = F, 
+            fill = "tozeroy")  %>%
+      add_trace(x = input$mu5, 
+                y = seq(0, dnorm(input$mu5, input$mu5, sqrt(input$sigma25/input$ams5)), 0.0001), 
+                type = "scatter", mode = "lines") %>%
+      layout(title = "Distribuição do Estimador Consistente", 
+             xaxis = list(title = ""))
+  )
+  
+  output$graf6 <- renderPlotly(
+    plot_ly(x = seq(0.2, 5.5, 0.001),
+            y = dgamma(seq(0.2, 5.5, 0.001),
+                       input$ams6, input$ams6 * input$lambda6), type = "scatter", 
+            mode = "lines", fill = "tozeroy", name = "Gama")  %>%
+      add_trace(x = seq(0.2, 5.5, 0.001),
+                y = dexp(seq(0.2, 5.5, 0.001), input$ams6 * input$lambda6), type = "scatter",
+                mode = "lines", fill = "tozeroy", name = "Exponencial") %>%
+      add_trace(x = 1/input$lambda6, y = seq(0, max(dgamma(1/input$lambda6, input$ams6, 
+                                                           input$ams6*input$lambda6), 
+                                                    dexp(1/input$lambda6, input$ams6*input$lambda6)), 
+                                             0.0001), 
+                type = "scatter", mode = "lines", line = list(color = "#043142"), showlegend = F) %>%
+      layout(title = "Distribuição dos dois Estimadores", 
+             xaxis = list(title = ""))
+  )
+  
+  output$graf7 <- renderPlotly(
+    plot_ly(x = seq(0.1,10,0.01), y = (2*(seq(0.1,10,0.01))^2) / ((input$ams7+2)*(input$ams7+1)) ,
+            type = "scatter", mode = "lines", fill = "none", name = "EQM(T₁)") %>%
+    add_trace(x = seq(0.1,10,0.01), y = (4*(seq(0.1,10,0.01))^2 + 27*input$ams7*(seq(0.1,10,0.01))^2)/48,
+            type = "scatter", mode = "lines", fill = "none", name = "EQM(T₂)")%>%
+      layout(title = "EQM de T₁ e T₂", 
+             xaxis = list(title = "θ"))
+  )
+  
+  output$pacotes <- renderUI(HTML("<ul> <li> shiny </li> <li> shinydashboard </li> <li> plotly </li>
+                               <li> ggplot2 </li></ul>"))
+  
+
+})
